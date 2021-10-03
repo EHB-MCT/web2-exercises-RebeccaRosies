@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="./index.js" type="module"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Werkcollege1ex1</title>
+</head>
+<body>
+    <h1>WEB 2 First Exercises</h1>
+    <form id= "form">
+        <div class="form-group">
+            <label for="nameInput">Name</label>
+            <input id = "nameInput" type="text" name="name" class="form-control" required></br> <!-- required -->
+            <label for="emailInput">Email</label>
+            <input id = "emailInput"type="text" name="email" class="form-control" required></br>
+           <!--  <label for="orderInput">Order</label>
+            <input id = "orderInput"type="text" name="order" class="form-control" required></br>
+ -->
+            <input type="checkbox" id="1" name="option" class="option" value = "1" >
+            <label for="Burger">Burger</label><br>
+            <input  type="checkbox" id="2" name="option" class="option" value = "2" >
+            <label for="Chicken wings">Chicken wings</label><br>
+            <input  type="checkbox" id="3" name="option" class="option" value = "3" >
+            <label for="Kebab">Kebab</label></br>
+            <input  type="checkbox" id="4" name="option" class="option" value = "4" >
+            <label for="Kebab">Fries</label></br>
+            <input  type="checkbox" id="5" name="option" class="option" value = "5" >
+            <label for="Kebab">Milkshake</label></br>
+
+
+            <button id = priceButton type="button"class="button">Calculate Price</button></br>
+            <div id = priceDisplay ></div>
+            <button type="submit"class="button">Submit</button></br>
+        </div>
+
+    </form>
+    <div id=orderDisplay></div>
+</body>
+</html>
