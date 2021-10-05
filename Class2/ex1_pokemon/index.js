@@ -1,4 +1,8 @@
 
+import team from './team.js'
+
+let team1 = new team ("poky");
+
 let list = [];
 let pokemon = [];
     function fetchPokemonDatabase() {
