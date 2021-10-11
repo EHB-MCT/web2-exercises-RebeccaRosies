@@ -1,8 +1,8 @@
 class Team {
-    constructor(teamname){
+    constructor(teamname, trainer,team){
         this.teamname = teamname;
-        this.trainer = "Rebecca";
-        this.pokemonteam = [];
+        this.trainer = trainer;
+        this.pokemonteam = [...team];
     }
     describe(){
         let description = `<div> Team ${this.teamname}, trained by ${this.trainer} consists of ${[...this.pokemonteam]} </div>`;
