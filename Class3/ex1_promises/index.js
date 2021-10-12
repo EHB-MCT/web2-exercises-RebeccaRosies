@@ -1,11 +1,11 @@
 let randomNumber;
+let messages = document.getElementById("messages");
 function generateNumber(){
     randomNumber = Math.floor(Math.random() * 20) + 1;
     console.log(randomNumber);
 }
 
 function initfields(){
-    let messages = document.getElementById("messages");
     let form = document.getElementById("form");
     form.addEventListener("submit", (e) =>{
         e.preventDefault();
@@ -13,7 +13,7 @@ function initfields(){
         console.log(inputNumber);
     
         compareNumbers(inputNumber).then(
-            result => {messages.innerHTML = result}, 
+            result => addmessages(result, good), 
             error =>{messages.innerHTML = error}
         );
     });
@@ -34,6 +34,9 @@ function compareNumbers(inputNumber){
     });
 }
 
+function addmessages(message, type){
+
+}
 
 
 window.onload = function (){
