@@ -1,5 +1,6 @@
 const apiKey  = "4a76b54";
 const form = document.getElementById("searchform");
+let counter = 0;
 function initfields(){   
     form.addEventListener("submit", (e) => {
         e.preventDefault();
@@ -23,6 +24,7 @@ function fetchMovies(Title){
                     </div>
                     <div class="col-md-8">
                         <div class="card-body">
+                            <button type="submit" class="btn btn-primary mb-2">+</button>
                             <h5 class="card-title">${data.Title}</h5>
                             <p class="card-text">${data.Plot}</p>
                             <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
@@ -32,10 +34,10 @@ function fetchMovies(Title){
                 </div>
             </div>
         `)
-        
-    
     })
 };
+
+
 
 window.onload = function(){
     initfields();
