@@ -5,8 +5,22 @@ let redirectUri = "http://127.0.0.1:5500/Project/index.html"; // Your redirect u
 let playlistURL = "https://api.spotify.com/v1/playlists/{playlist_id}";
 let userPlaylistURL  = "https://api.spotify.com/v1/users/{user_id}/playlists";
 
+
 function fetchData(){
-    fetch("https://api.lyrics.ovh/v1/Sia/Chandelier")
+    let songtitle = "Chandelier"
+
+    fetch(`https://api.lyrics.ovh/v1/Sia/${songtitle}`)
+    .then(response => response.json())
+    .then(data => {
+        console.log(data);
+        let lyricHolder = document.getElementById("lyricHolder");
+        lyricHolder.insertAdjacentHTML("afterend", songtitle);
+        lyricHolder.insertAdjacentHTML("afterend", data.lyrics);
+    })
+};
+
+/* function fetchSpotify(){
+    fetch("https://api.spotify.com/v1/artists/1vCWHaC5f2uS3yhpwWbIA6/albums?album_type=SINGLE&offset=20&limit=10")
     .then(response => response.json())
     .then(data => {
         console.log(data);
@@ -14,10 +28,11 @@ function fetchData(){
         lyricHolder.insertAdjacentHTML("afterend", data.lyrics)
 
     })
-};
+}; */
 
 window.onload = function(){
     fetchData();
+    fetchSpotify();
 };
 
 /* window.onSpotifyWebPlaybackSDKReady = () => {
