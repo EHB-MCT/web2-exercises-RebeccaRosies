@@ -2,8 +2,11 @@ import Cleave from "cleave.js";
 require('cleave.js/dist/addons/cleave-phone.be');
 
 window.onload = function() {
-    console.log("test");}
+    console.log("test");
+    inputFormats();
+}
 
+function inputFormats(){
 
     var cleave = new Cleave ('.demoinput', {
         blocks:[2,2,2,3,2]
@@ -34,7 +37,9 @@ window.onload = function() {
 
     var phone = new Cleave ('.phone', {
         phone: true,
-        phoneRegionCode: 'BE'
+        phoneRegionCode: 'BE',
+        blocks:[2,3,2,2]
     });
 
     console.log("test1");
+}
