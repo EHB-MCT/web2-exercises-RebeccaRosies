@@ -1,0 +1,30 @@
+{
+    "student": "Rebecca Rosies",
+    "courses": [
+        {
+            "name": "Design IV",
+            "hype": 3
+        },
+        {
+            "name": "Development IV",
+            "hype": 6
+        },
+        {
+            "name": "3D modeling & animation",
+            "hype": 9
+        },
+        {
+            "name": "3D gaming",
+            "hype": 8
+        },
+        {
+            "name": "X-reality",
+            "hype": 10
+        },
+        {
+            "name": "Drones",
+            "hype": 8
+        }
+
+    ]
+}

@@ -23,9 +23,21 @@ eval("/*!\n * Chart.js v3.6.0\n * https://www.chartjs.org\n * (c) 2021 Chart.js 
 /*!***********************!*\
   !*** ./src/script.js ***!
   \***********************/
-/***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("const Chart = __webpack_require__(/*! ../node_modules/chart.js/dist/chart.js */ \"./node_modules/chart.js/dist/chart.js\");\r\n\r\n\n\n//# sourceURL=webpack://ex2_sexyGraphs/./src/script.js?");
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _data_data_json__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../data/data.json */ \"./data/data.json\");\nconst Chart = __webpack_require__(/*! ../node_modules/chart.js/dist/chart.js */ \"./node_modules/chart.js/dist/chart.js\");\r\n\r\n\r\nlet labels = [];\r\nlet hypelevels = [];\r\n\r\n_data_data_json__WEBPACK_IMPORTED_MODULE_0__.courses.forEach(function(course, index){\r\n    labels.push(course.name);\r\n    hypelevels.push(course.hype);\r\n})\r\n\r\n\r\nconst ctx = document.getElementById('hypechart').getContext('2d');\r\nconst myChart = new Chart(ctx, {\r\n    type: 'bar',\r\n    data: {\r\n        labels: labels,\r\n        datasets: [{\r\n            label: `hypelevels of ${_data_data_json__WEBPACK_IMPORTED_MODULE_0__.student}`,\r\n            data: hypelevels,\r\n            backgroundColor: [\r\n                'rgba(255, 99, 132, 0.2)',\r\n                'rgba(54, 162, 235, 0.2)',\r\n                'rgba(255, 206, 86, 0.2)',\r\n                'rgba(75, 192, 192, 0.2)',\r\n                'rgba(153, 102, 255, 0.2)',\r\n                'rgba(255, 159, 64, 0.2)'\r\n            ],\r\n            borderColor: [\r\n                'rgba(255, 99, 132, 1)',\r\n                'rgba(54, 162, 235, 1)',\r\n                'rgba(255, 206, 86, 1)',\r\n                'rgba(75, 192, 192, 1)',\r\n                'rgba(153, 102, 255, 1)',\r\n                'rgba(255, 159, 64, 1)'\r\n            ],\r\n            borderWidth: 1\r\n        }]\r\n    },\r\n    options: {\r\n        scales: {\r\n            y: {\r\n                beginAtZero: true\r\n            }\r\n        }\r\n    }\r\n});\n\n//# sourceURL=webpack://ex2_sexyGraphs/./src/script.js?");
+
+/***/ }),
+
+/***/ "./data/data.json":
+/*!************************!*\
+  !*** ./data/data.json ***!
+  \************************/
+/***/ ((module) => {
+
+"use strict";
+eval("module.exports = JSON.parse('{\"student\":\"Rebecca Rosies\",\"courses\":[{\"name\":\"Design IV\",\"hype\":3},{\"name\":\"Development IV\",\"hype\":6},{\"name\":\"3D modeling & animation\",\"hype\":9},{\"name\":\"3D gaming\",\"hype\":8},{\"name\":\"X-reality\",\"hype\":10},{\"name\":\"Drones\",\"hype\":8}]}');\n\n//# sourceURL=webpack://ex2_sexyGraphs/./data/data.json?");
 
 /***/ })
 
@@ -54,6 +66,18 @@ eval("const Chart = __webpack_require__(/*! ../node_modules/chart.js/dist/chart.
 /******/ 		// Return the exports of the module
 /******/ 		return module.exports;
 /******/ 	}
+/******/ 	
+/************************************************************************/
+/******/ 	/* webpack/runtime/make namespace object */
+/******/ 	(() => {
+/******/ 		// define __esModule on exports
+/******/ 		__webpack_require__.r = (exports) => {
+/******/ 			if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
+/******/ 				Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
+/******/ 			}
+/******/ 			Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 		};
+/******/ 	})();
 /******/ 	
 /************************************************************************/
 /******/ 	
